@@ -26,9 +26,11 @@ ActiveRecord::Schema.define(version: 2020_01_13_145311) do
 
   create_table "video_games", force: :cascade do |t|
     t.string "name"
+    t.bigint "user_id"
     t.string "condition"
     t.integer "price"
     t.string "category"
+    t.string "video_game_photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
