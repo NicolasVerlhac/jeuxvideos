@@ -4,4 +4,12 @@
     Ceci est une navbar
   </a>
 
+  <% if signed_in? %>
+    <div>
+      <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+    </div>
+  <% else %>
+    <div class="btn btn-flat-nav"> <%= link_to "s'inscrire", new_user_registration_path %> </div>
+  <% end %>
+
 </nav>
